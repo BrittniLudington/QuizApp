@@ -4,20 +4,42 @@
         <title>Riddle Quiz</title>
         <meta name = "description" content = "quiz of ten riddles for Thinkful">
         <meta name = "viewport" content = "width=device-width, initial-scale=1.0"> <!--Got this from w3schools.-->
-        <link href="Style.css" rel="stylesheet" type="text/css">
+        <link href="style.css" rel="stylesheet" type="text/css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script type="module" src="js/quiz-js.js"></script>
     </head>
     <body>
-        <header id="scoreHeader"  class="invisible">
-            score goes here
+        <header id="scoreHeader" class = "scoreHeader-js">
+
         </header>
-        <main id = "mainPage" role="main page">
+        <main id = "mainPage" class = "mainPage-js" role="main page">
             <h1 id = "title">RIDDLE QUIZ</h1>
-            <button type = "button" id = "startButton">Start</button>
+            <button type = "button" id = "startButton" class="startButton-js">Start</button>
         </main>
 
-       <!-- <section class = "question">
-            <h1>Question #</h1>
+       <section class = "question-js" id="question">
+            <h1 id = "questionNum"></h1>
+            <blockquote></blockquote>
+            <main id = "menu">
+                <ul id="options" class = "options-js">
+                <li>
+                    <button type = "button" class = "answerButton-js" value = "a"></button>
+                </li>
+                <li>
+                    <button type = "button" class = "answerButton-js" value = "b"></button>
+                </li>
+                <li>
+                    <button type = "button" class = "answerButton-js" value = "c"></button>
+                </li>
+                <li>
+                    <button type = "button" class = "answerButton-js" value = "d"></button>
+                </li>
+            </ul>
+            <figure id="questionImage">
+                <img>
+            </figure>
+        </main>
         </section>
-        -->
+        
     </body>
 </html>
