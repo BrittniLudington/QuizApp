@@ -33,8 +33,7 @@ Question Three
 
 Question Four
 
-	Everytime you lose something, you'll always find it in the very last place you looked,
-	why is that?
+	Everytime you lose something, you'll always find it in the very last place you looked, why is that?
 
 	a.) It was in the last place I looked.
 	b.) I didn't think about looking there.
