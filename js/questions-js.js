@@ -79,13 +79,13 @@ export const questions =
         number : 10,
         question : "Finale, let's shake things up."+
         "Two women went out for drinks one night. They both ordered the same drink."+
-        "One of the women was incredibly thirsty and finished five in the time it took" +
-        "the other to finish just one. As it had turned out the drinks were poisoned,"+
-        "but only the lady who drank one drink died. How can this be?",
+        " One of the women was incredibly thirsty and finished five in the time it took" +
+        " the other to finish just one. As it had turned out the drinks were poisoned,"+
+        " but only the lady who drank one drink died. How can this be?",
         options : {a : "The surviving lady was immune", b : "The deceased lady's drink had a higher amount of poison", c : "One was allergic the other was not", d : "The surviving lady drank hers too quick for the poison"},
         answer : "d",
         reason : "The poison was hidden inside the drinks' ice cubes. The deceased lady"+
-        "drank slowly enough for the ice to melt and poison the rest of the drink, while the other"+
+        " drank slowly enough for the ice to melt and poison the rest of the drink, while the other "+
         "finished each glass before the poison had time to thaw.",
         image : "./img/10.png"
     },

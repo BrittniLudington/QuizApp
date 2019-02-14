@@ -1,17 +1,20 @@
 body
 {
-    display:flex;
+  /*  display:flex;
     align-items:center;
     justify-content:center;
+    */
 }
 
 #mainPage
 {
-    display:flex;
+   /* display:flex;
     flex-direction: column;
     align-items: center;
     text-align:center;
     justify-content: center;
+    */
+    text-align: center;
 }
 
 #title
@@ -28,29 +31,25 @@ body
 
 #scoreHeader
 {
-    position: absolute;
     border:1px solid black;
-    left:0;
-    top:0;
-    width: 40%;
+    width: 50%;
     height:10%;
+    position: static;
+
 }
 
 /*-----------------------------------------------------------*/
 
-.invisible
-{
-    visibility: hidden;
-}
-
 #question
 {
-    display:flex;
+   /* display:flex;
     align-items: center;
     text-align:center;
     justify-content: center;
     flex-direction:column;
+    */
     width:100%;
+    text-align: center;
 }
 
 #questionNum
@@ -62,9 +61,13 @@ body
 #options
 {
     list-style-type: none;
-    width:100%;
-    text-align:left;
-    align-self: start;
+    width:30%;
+    text-align:right;
+    margin:0;
+    padding: 0;
+    display:inline-block;
+    height:auto;
+    vertical-align: top;
 }
 
 li
@@ -78,15 +81,15 @@ li
 {
     padding: 0;
     margin : 0;
-    width:100%;
+    display:inline-block;
 }
 
 #menu
 {
-    display:flex;
-    width:80%;
+   /* display:flex; */
+    width: 100%;
+    height : 60%;
     margin-left:0;
-
 }
 
 /*-----------------------------------------*/
@@ -106,9 +109,27 @@ li
     font-size:50pt;
 }
 
+#reasoning
+{
+    width:50%;
+    height:auto;
+    text-align: center;
+}
+
 #continueButton
 {
     width:20%;
+}
+/*-------------------------------------------------*/
+
+#fResult
+{
+    text-align: center;
+}
+
+#score
+{
+    font-size:40pt;
 }
 
 @media screen and (max-width:310px)
