@@ -143,7 +143,17 @@ function renderFinalResult()
             count += score[i];
     }
     $(".score-js").html(count + "/10");
-
+    const finalScore = document.getElementById("finalScore");
+    
+    for(let i = 0; i < score.length; i++)
+    {
+        let img = new Image();
+        if(score[i] == 1)
+            img.src = scoreImages.correct;
+        else
+            img.src = scoreImages.incorrect;
+        finalScore.appendChild(img);
+    }
     $(".finalResult-js").show();
 }
 
@@ -212,7 +222,7 @@ function renderQuestion()
     string += "<ul id='options' class = 'options-js'>";
     for(var k in curQuestion.options)
     {
-        string +=  "<li><button type = 'button' class = 'answerButton-js' value = "+k+">"+k+".) "+curQuestion.options[k]+"</button></li>";
+        string +=  "<li><button type = 'button' id = 'answerButton' class = 'answerButton-js' value = "+k+">"+k+".) "+curQuestion.options[k]+"</button></li>";
     }
     string += "</ul>";
     string += "<figure id='questionImage'><img src = "+curQuestion.image+"></figure>";
