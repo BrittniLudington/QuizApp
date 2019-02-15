@@ -49,6 +49,7 @@ function handleQuestionButtons()
 {
     $('.question-js').on('click','.answerButton-js',function(event)
     {
+        event.preventDefault();
         console.log("answer " + $(this).attr("value") + " clicked.");
         setResult($(this).attr("value"));
     });
@@ -87,6 +88,13 @@ function setImages()
         img.src = scoreImages.pending;
         scoreBox.appendChild(img);
     }
+
+    let finalScore = document.getElementById("finalScore");
+    for(let i = 0; i < score.length; i++)
+    {
+        let img = new Image();
+        finalScore.appendChild(img);
+    }
 }
 
 function setTitle()
@@ -95,30 +103,32 @@ function setTitle()
     $(".scoreHeader-js").hide();
     $(".question-js").hide();
     $(".questionResult-js").hide();
-    $(".mainPage-js").show();
     $(".finalResult-js").hide();
 
+    $(".mainPage-js").show();
 }
 function setQuestion()
 {
     // hide title, show question elements
-    $(".scoreHeader-js").show();
-    $(".question-js").show();
-
     $(".questionResult-js").hide();
     $(".mainPage-js").hide();
     $(".finalResult-js").hide();
+
     renderQuestion();
+
+    $(".scoreHeader-js").show();
+    $(".question-js").show();
 }
 function setResult(chosenAnswer)
 {
-    $(".scoreHeader-js").show();
     $(".question-js").hide();
     $(".mainPage-js").hide();
     $(".finalResult-js").hide();
-    $(".questionResult-js").show();
 
     renderResult(chosenAnswer);
+
+    $(".scoreHeader-js").show();
+    $(".questionResult-js").show();
 }
 
 function setFinalResult()
@@ -129,6 +139,9 @@ function setFinalResult()
     $(".questionResult-js").hide();
 
     renderFinalResult();
+
+    $(".finalResult-js").show();
+
 
 }
 
@@ -143,18 +156,25 @@ function renderFinalResult()
             count += score[i];
     }
     $(".score-js").html(count + "/10");
-    const finalScore = document.getElementById("finalScore");
     
-    for(let i = 0; i < score.length; i++)
+    count = 0;
+    $(".finalScore-js img").each(function(index)
     {
-        let img = new Image();
-        if(score[i] == 1)
-            img.src = scoreImages.correct;
-        else
-            img.src = scoreImages.incorrect;
-        finalScore.appendChild(img);
-    }
-    $(".finalResult-js").show();
+        if(score[count] == 1)
+        {
+            $(this).attr("src",scoreImages.correct);
+        }
+        if(score[count] == 0)
+        {
+            $(this).attr("src",scoreImages.incorrect);
+        }
+        if(isNaN(score[count]))
+        {
+            $(this).attr("src",scoreImages.pending);
+        }
+        count++;
+    });
+
 }
 
 function renderResult(chosenAnswer)
@@ -201,16 +221,7 @@ function renderScore()
         }
         count++;
     });
-   /* for(let i = 0; i < score.length; i++)
-    {
-        if(score[i] == 1)
-        {
-
-            count++;
-        }
-    }
-    */
-    //$(".scoreHeader-js").html("<p>Score: " + count + "</p>");
+  
 }
 
 function renderQuestion()
@@ -225,7 +236,7 @@ function renderQuestion()
         string +=  "<li><button type = 'button' id = 'answerButton' class = 'answerButton-js' value = "+k+">"+k+".) "+curQuestion.options[k]+"</button></li>";
     }
     string += "</ul>";
-    string += "<figure id='questionImage'><img src = "+curQuestion.image+" id='actualImage' alt = ''></figure>";
+    string += "<figure id='questionImage'><img src = "+curQuestion.image+" id='actualImage' alt = "+curQuestion.alt+"></figure>";
     string += "</form>";
     $(".question-js").html(string);
 }

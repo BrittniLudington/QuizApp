@@ -5,6 +5,17 @@ body
     background-image: url("./img/paper-background.png");
 }
 
+button
+{
+    border-radius: 30px;
+}
+
+button:hover
+{
+    background-color:white;
+}
+
+
 #mainPage
 {
    /* display:flex;
@@ -52,6 +63,10 @@ body
     text-align: center;
 }
 
+#answerButton
+{
+    font-size: 20pt;
+}
 
 
 #questionNum
@@ -65,7 +80,7 @@ body
 {
     list-style-type: none;
     width:30%;
-    text-align:right;
+    text-align:center;
     margin:0;
     padding: 0;
     display:inline-block;
@@ -75,8 +90,9 @@ body
 
 li
 {
-    margin:2%;
-    width : 50%;
+    padding-top:5px;
+    margin:0;
+    width : 100%;
 }
 
 #questionImage
@@ -143,7 +159,7 @@ li
     font-family: 'Merienda', cursive;
 }
 
-@media screen and (max-width:330px)
+@media screen and (max-width:360px)
 {
     #title
     {
@@ -157,9 +173,26 @@ li
     {
         width: 100%;
     }
+    #questionNum
+    {
+        margin:0;
+    }
+    #answerButton
+    {
+        font-size:10pt;
+        text-align: center;
+    }
+    #questionImage
+    {
+        display:block;
+        width: 50%;
+        text-align: center;
+        margin:auto;
+    }
+
 }
 
-@media screen and (max-width : 940px)
+@media screen and (max-width : 940px) and ( min-width:361px)
 {
 
     #menu
@@ -186,5 +219,12 @@ li
         text-align: center;
         margin:auto;
     }
-
+    #answerButton
+    {
+        font-size:15pt;
+    }
+    #questionNum
+    {
+        margin:auto;
+    }
 }
