@@ -218,15 +218,15 @@ function renderQuestion()
     const curQuestion = questions[currentQuestion];
     let string = " <h1 id = 'questionNum'>Question "+curQuestion.number+"</h1>";
     string += "<blockquote>"+curQuestion.question+"</blockquote>";
-    string += "<main id = 'menu'>";
+    string += "<form id = 'menu'>";
     string += "<ul id='options' class = 'options-js'>";
     for(var k in curQuestion.options)
     {
         string +=  "<li><button type = 'button' id = 'answerButton' class = 'answerButton-js' value = "+k+">"+k+".) "+curQuestion.options[k]+"</button></li>";
     }
     string += "</ul>";
-    string += "<figure id='questionImage'><img src = "+curQuestion.image+"></figure>";
-    string += "</main>";
+    string += "<figure id='questionImage'><img src = "+curQuestion.image+" id='actualImage' alt = ''></figure>";
+    string += "</form>";
     $(".question-js").html(string);
 }
 
