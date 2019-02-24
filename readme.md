@@ -17,7 +17,7 @@
  
   A Question page
   
-    <img src="https://github.com/BrittniLudington/QuizApp/blob/master/wireframes/question.png?raw=true">
+  <img  src="https://github.com/BrittniLudington/QuizApp/blob/master/wireframes/question.png?raw=true">
     
  Question Result page
  
