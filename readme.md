@@ -13,17 +13,17 @@ Contents
 
   Index page
   
-    ![front page](https://github.com/BrittniLudington/QuizApp/blob/master/wireframes/frontPage.png?raw=true)
+    ![Alt text](https://github.com/BrittniLudington/QuizApp/blob/master/wireframes/frontPage.png?raw=true)
     
  
   A Question page
   
-    ![question page](https://github.com/BrittniLudington/QuizApp/blob/master/wireframes/question.png?raw=true)
+    ![Alt text](https://github.com/BrittniLudington/QuizApp/blob/master/wireframes/question.png?raw=true)
     
  Question Result page
  
-    ![question page](https://github.com/BrittniLudington/QuizApp/blob/master/wireframes/questionResult.png?raw=true)
+    ![Alt text](https://github.com/BrittniLudington/QuizApp/blob/master/wireframes/questionResult.png?raw=true)
     
  Final Result page
  
-    ![final result page](https://github.com/BrittniLudington/QuizApp/blob/master/wireframes/finalResult.png?raw=true)
+    ![Alt text](https://github.com/BrittniLudington/QuizApp/blob/master/wireframes/finalResult.png?raw=true)
