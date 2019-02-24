@@ -26,4 +26,4 @@ Contents
     
  Final Result page
  
-    ![Alt text](https://github.com/BrittniLudington/QuizApp/blob/master/wireframes/finalResult.png?raw=true)
+    ![Alt text](https://github.com/BrittniLudington/QuizApp/blob/master/wireframes/finalResult.png)
