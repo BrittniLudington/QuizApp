@@ -63,9 +63,32 @@ button:hover
     text-align: center;
 }
 
+label
+{
+    font-size:20pt;
+    font-family: 'Merienda', cursive;
+    height:auto;
+    width:5%;
+    display:inline-block;
+    vertical-align: middle;
+}
+
+
 #answerButton
 {
-    font-size: 20pt;
+    font-size: 15pt;
+    border:1px solid black;
+    white-space: normal;
+    border-radius:10px;
+    height:auto;
+    overflow-wrap: normal;
+    max-width:95%;
+    display:inline-block;
+}
+
+#answerButton:hover
+{
+    background-color:white;
 }
 
 
@@ -79,12 +102,12 @@ button:hover
 #options
 {
     list-style-type: none;
-    width:30%;
+    width:40%;
     text-align:center;
     margin:0;
     padding: 0;
     display:inline-block;
-    height:auto;
+    height:100%;
     vertical-align: top;
 }
 
@@ -93,6 +116,7 @@ li
     padding-top:5px;
     margin:0;
     width : 100%;
+    height:auto;
 }
 
 #questionImage
@@ -112,7 +136,7 @@ li
 {
    /* display:flex; */
     width: 100%;
-    height : 60%;
+    height : 80%;
     margin-left:0;
 }
 

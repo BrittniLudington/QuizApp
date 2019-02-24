@@ -51,7 +51,12 @@ function handleQuestionButtons()
     {
         event.preventDefault();
         console.log("answer " + $(this).attr("value") + " clicked.");
-        setResult($(this).attr("value"));
+        setResult($(this).attr("name"));
+    });
+    $('.question-js').on("mouseover",'.answerButton-js',function(event)
+    {
+        event.preventDefault();
+
     });
 }
 
@@ -179,6 +184,7 @@ function renderFinalResult()
 
 function renderResult(chosenAnswer)
 {
+    console.log(chosenAnswer);
     let ans = 0;
     if(questions[currentQuestion].answer.includes(chosenAnswer))
     {
@@ -233,7 +239,10 @@ function renderQuestion()
     string += "<ul id='options' class = 'options-js'>";
     for(var k in curQuestion.options)
     {
-        string +=  "<li><button type = 'button' id = 'answerButton' class = 'answerButton-js' value = "+k+">"+k+".) "+curQuestion.options[k]+"</button></li>";
+        let name = k+" button";
+        let value = k+".) "+curQuestion.options[k];
+        JSON.stringify(value);
+        string +=  "<li><label for="+name+">? </label><input type = 'button' name="+name+" id = 'answerButton' class = 'answerButton-js' value = \""+value+"\"/></li>";
     }
     string += "</ul>";
     string += "<figure id='questionImage'><img src = "+curQuestion.image+" id='actualImage' alt = "+curQuestion.alt+"></figure>";
